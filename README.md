@@ -1,6 +1,6 @@
 # Spheroids
 
-Repository for the preprint "Quantitative analysis of tumour spheroid structure" available on bioRxiv.
+Repository for the preprint "Quantitative analysis of tumour spheroid structure" available on [bioRxiv](https://www.biorxiv.org/content/10.1101/2021.08.05.455334v1).
 
 ## Figures
  - [Figure 1](https://htmlpreview.github.io/?https://github.com/ap-browning/Spheroids/blob/main/Figures/Fig1/fig1.html)
@@ -61,6 +61,6 @@ AP Browning, JA Sharp, RJ Murphy, G Gunasingh, B Lawson, K Burrage, NK Haass, MJ
 	author       = {Browning, Alexander P and Sharp, Jesse A and Murphy, Ryan J and Gunasingh, Gency and Lawson, Brodie and Burrage, Kevin and Haass, Nikolas K and Simpson, Matthew J},
 	year         = 2021,
 	journal      = {bioRxiv},
-    doi          = xx
+	doi          = {10.1101/2021.08.05.455334}
 }
 ```
