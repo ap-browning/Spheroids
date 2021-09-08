@@ -1,6 +1,6 @@
 # Spheroids
 
-Repository for the preprint "Quantitative analysis of tumour spheroid structure" available on [bioRxiv](https://www.biorxiv.org/content/10.1101/2021.08.05.455334v1).
+Repository for the preprint "Quantitative analysis of tumour spheroid structure" available on [bioRxiv](https://www.biorxiv.org/content/10.1101/2021.08.05.455334v1). 
 
 ## Figures
  - [Figure 1](https://htmlpreview.github.io/?https://github.com/ap-browning/Spheroids/blob/main/Figures/Fig1/fig1.html)
@@ -14,7 +14,7 @@ Repository for the preprint "Quantitative analysis of tumour spheroid structure"
 
 ## Data
 
-All data used in the analysis is available in `Data`. Data collected from the Incucyte S3 (Satorius) (i.e., outer radius measurements only) is available in `IncucyteData.csv`. Data summarised from confocal microscopy images (find the repository containing image processing codes here) is available in `AllConfocalData.csv`.
+All data used in the analysis is available in `Data`. Data collected from the Incucyte S3 (Satorius) (i.e., outer radius measurements only) is available in `IncucyteData.csv`. Data summarised from confocal microscopy images (find the repository containing image processing codes here) is available in `AllConfocalData.csv`. Data are processed using code available at [https://github.com/ap-browning/SpheroidsImageProcessing](https://github.com/ap-browning/SpheroidsImageProcessing).
 
 The script `SubsetData.jl` randomly subsets the complete confocal data set in `Data/AllConfocalData.csv` so that the sample size for each condition is approximately the same (a random seed is used to ensure reproducability). 
 
@@ -53,7 +53,7 @@ Note that most figures contain a version saved as `html`. While these figures ma
 ## Citation
 If you use the data or software in this repository in your own work, please cite the following:
 
-AP Browning, JA Sharp, RJ Murphy, G Gunasingh, B Lawson, K Burrage, NK Haass, MJ Simpson. 2021 Quantitative analysis of tumour spheroid structure. _bioRxiv_ [doi:test](https://dx.doi.org/test)
+AP Browning, JA Sharp, RJ Murphy, G Gunasingh, B Lawson, K Burrage, NK Haass, MJ Simpson. 2021 Quantitative analysis of tumour spheroid structure. _bioRxiv_ [doi:10.1101/2021.08.05.455334](https://dx.doi.org/10.1101/2021.08.05.455334)
 
 ```
 @article{Browning.2021gh,
