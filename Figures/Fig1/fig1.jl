@@ -2,6 +2,10 @@
     Figure 1    
 =#
 
+push!(LOAD_PATH,"Module/Greenspan")
+push!(LOAD_PATH,"Module/Inference")
+
+
 using CSV
 using DataFrames
 using DataFramesMeta

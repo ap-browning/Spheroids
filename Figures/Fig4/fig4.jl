@@ -29,6 +29,7 @@ include("../FigureDefaults.jl")
     # Look at day 12 data onwards
     confocal = @subset(CSV.read("Data/ConfocalData.csv",DataFrame),:CellLine .== CellLine, :Day .≥ 12.0)
 
+
 #########################################################################
 ## "Identity model": fit the mean of each observation at each time
 

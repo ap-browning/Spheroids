@@ -8,9 +8,10 @@ Repository for the preprint "Quantitative analysis of tumour spheroid structure"
  - [Figure 4](https://htmlpreview.github.io/?https://github.com/ap-browning/Spheroids/blob/main/Figures/Fig4/fig4.html)
  - [Figure 5](https://htmlpreview.github.io/?https://github.com/ap-browning/Spheroids/blob/main/Figures/Fig5/fig5.html)
  - [Figure 6](https://htmlpreview.github.io/?https://github.com/ap-browning/Spheroids/blob/main/Figures/Fig6/fig6.html)
- - [Figure S7](https://htmlpreview.github.io/?https://github.com/ap-browning/Spheroids/blob/main/Figures/FigS7/figS7.html)
- - [Figure S8](https://htmlpreview.github.io/?https://github.com/ap-browning/Spheroids/blob/main/Figures/FigS8/figS8.html)
- - [Figure S9](https://htmlpreview.github.io/?https://github.com/ap-browning/Spheroids/blob/main/Figures/FigS9/figS9.html)
+ - [Figure A1](https://htmlpreview.github.io/?https://github.com/ap-browning/Spheroids/blob/main/Figures/FigA1/figA1.html)
+ - [Figure A2](https://htmlpreview.github.io/?https://github.com/ap-browning/Spheroids/blob/main/Figures/FigA2/figA2.html)
+ - [Figure A3](https://htmlpreview.github.io/?https://github.com/ap-browning/Spheroids/blob/main/Figures/FigA3/figA3.html)
+ - [Figure S3](https://htmlpreview.github.io/?https://github.com/ap-browning/Spheroids/blob/main/Figures/FigS3/figS3.html)
 
 ## Data
 

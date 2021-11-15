@@ -23,7 +23,7 @@ using Inference
     InitialConditions   = [2500.0,5000.0,10000.0]
 
     # Look at day 18 (5000 and 10000) and day 21 (2500)
-    confocal = @where(CSV.read("Data/AllConfocalData.csv",DataFrame),
+    confocal = @subset(CSV.read("Data/AllConfocalData.csv",DataFrame),
         :CellLine .== CellLine,
         (:Day .== 21.0) .& (:InitialCondition .== 2500) .|
         (:Day .== 18.0) .& (:InitialCondition .== 5000) .|
@@ -52,7 +52,7 @@ using Inference
         # Log-likelihood function
         local loglike = θ -> loglikelihood(
             (obs_process ∘ model)(θ),   # Xᵢ ∼ f(m(θ))
-            @where(confocal, :InitialCondition .== InitialCondition)[:,[:R,:ϕ,:η]])
+            @subset(confocal, :InitialCondition .== InitialCondition)[:,[:R,:ϕ,:η]])
 
         # Find MLE and CI
         θmle1[i],CI1[i] = find_mle(loglike,θ₀,lb,ub)      
@@ -62,15 +62,15 @@ using Inference
     # Test for θ₂₅₀₀ = θ₅₀₀₀ 
     model = M -> M
     res11 = twosampletest(model,obs_process,θ₀,
-        @where(confocal, :InitialCondition .== 2500)[:,[:R,:ϕ,:η]],
-        @where(confocal, :InitialCondition .== 5000)[:,[:R,:ϕ,:η]];lb,ub
+        @subset(confocal, :InitialCondition .== 2500)[:,[:R,:ϕ,:η]],
+        @subset(confocal, :InitialCondition .== 5000)[:,[:R,:ϕ,:η]];lb,ub
     )
 
     # Test for θ₅₀₀₀ = θ₁₀₀₀₀
     model = M -> M
     res12 = twosampletest(model,obs_process,θ₀,
-        @where(confocal, :InitialCondition .== 5000)[:,[:R,:ϕ,:η]],
-        @where(confocal, :InitialCondition .== 10000)[:,[:R,:ϕ,:η]];lb,ub
+        @subset(confocal, :InitialCondition .== 5000)[:,[:R,:ϕ,:η]],
+        @subset(confocal, :InitialCondition .== 10000)[:,[:R,:ϕ,:η]];lb,ub
     )
 
 #########################################################################
@@ -80,9 +80,9 @@ using Inference
     model = θ -> steady_state(θ)
 
     # Parameter bounds and initial guess
-    lb    = [0.01,  0.01,  10.0]
-    ub    = [0.99, 50.00, 400.0]
-    θ₀    = [0.90,   3.0, 250.0]
+    lb    = [0.01,  10.0, 0.01]
+    ub    = [0.99, 300.0, 50.00]
+    θ₀    = [0.90, 250.0, 3.0]
 
     # Find MLEs and confidence intervals for each initial condition
     θmle2,CI2 = [Array{Any,1}(undef,3) for i = 1:3]
@@ -91,7 +91,7 @@ using Inference
         # Log-likelihood function
         local loglike = θ -> loglikelihood(
             (obs_process ∘ model)(θ),   # Xᵢ ∼ f(m(θ))
-            @where(confocal, :InitialCondition .== InitialCondition)[:,[:R,:ϕ,:η]])
+            @subset(confocal, :InitialCondition .== InitialCondition)[:,[:R,:ϕ,:η]])
 
         # Find MLE and CI
         θmle2[i],CI2[i] = find_mle(loglike,θ₀,lb,ub)
@@ -100,14 +100,14 @@ using Inference
 
     # Test for θ₂₅₀₀ = θ₅₀₀₀ 
     res21 = twosampletest(model,obs_process,θ₀,
-        @where(confocal, :InitialCondition .== 2500)[:,[:R,:ϕ,:η]],
-        @where(confocal, :InitialCondition .== 5000)[:,[:R,:ϕ,:η]];lb,ub
+        @subset(confocal, :InitialCondition .== 2500)[:,[:R,:ϕ,:η]],
+        @subset(confocal, :InitialCondition .== 5000)[:,[:R,:ϕ,:η]];lb,ub
     )
 
     # Test for θ₅₀₀₀ = θ₁₀₀₀₀
     res22 = twosampletest(model,obs_process,θ₀,
-        @where(confocal, :InitialCondition .== 5000)[:,[:R,:ϕ,:η]],
-        @where(confocal, :InitialCondition .== 10000)[:,[:R,:ϕ,:η]];lb,ub
+        @subset(confocal, :InitialCondition .== 5000)[:,[:R,:ϕ,:η]],
+        @subset(confocal, :InitialCondition .== 10000)[:,[:R,:ϕ,:η]];lb,ub
     )
 
 #########################################################################

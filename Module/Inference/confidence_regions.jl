@@ -77,7 +77,7 @@ function confidenceregion2D(ξopt,loglike,∇loglike;
     X   = hcat(sol.u...)'
 
     # Did we go out of bounds?
-    while inbounds(X[end,:]) == false
+    if inbounds(X[end,:]) == false
 
         display("Out of bounds once!")
 
