@@ -1,6 +1,6 @@
 # Spheroids
 
-Repository for the preprint "Quantitative analysis of tumour spheroid structure" available on [bioRxiv](https://www.biorxiv.org/content/10.1101/2021.08.05.455334v1). 
+Repository for the paper "Quantitative analysis of tumour spheroid structure" available on [eLife](https://doi.org/10.7554/eLife.73020). 
 
 ## Figures
  - [Figure 1](https://htmlpreview.github.io/?https://github.com/ap-browning/Spheroids/blob/main/Figures/Fig1/fig1.html)
@@ -54,14 +54,16 @@ Note that most figures contain a version saved as `html`. While these figures ma
 ## Citation
 If you use the data or software in this repository in your own work, please cite the following:
 
-AP Browning, JA Sharp, RJ Murphy, G Gunasingh, B Lawson, K Burrage, NK Haass, MJ Simpson. 2021 Quantitative analysis of tumour spheroid structure. _bioRxiv_ [doi:10.1101/2021.08.05.455334](https://dx.doi.org/10.1101/2021.08.05.455334)
+AP Browning, JA Sharp, RJ Murphy, G Gunasingh, B Lawson, K Burrage, NK Haass, MJ Simpson. 2021 Quantitative analysis of tumour spheroid structure. _eLife_ **10**:e73020 [doi:10.7554/eLife.73020](https://doi.org/10.7554/eLife.73020)
 
 ```
 @article{Browning.2021gh,
 	title        = {Quantitative analysis of tumour spheroid structure},
 	author       = {Browning, Alexander P and Sharp, Jesse A and Murphy, Ryan J and Gunasingh, Gency and Lawson, Brodie and Burrage, Kevin and Haass, Nikolas K and Simpson, Matthew J},
 	year         = 2021,
-	journal      = {bioRxiv},
-	doi          = {10.1101/2021.08.05.455334}
+	volume       = 10,
+	pages 	     = {e73020},
+	journal      = {eLife},
+	doi          = {10.7554/eLife.73020}
 }
 ```
